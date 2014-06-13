@@ -1,0 +1,16 @@
+[
+	{
+		"modid": "theisleoffavalon_haku",
+		"name": "Haku",
+		"description": "A fun mod to add some interesting creates",
+		"version": "${version}",
+		"mcversion": "${mcversion}",
+		"url": "https://github.com/cadyyan/haku",
+		"updateUrl": "",
+		"authorList": ["Cadyyan"],
+		"credits": "LinzyGirl for the idea :)",
+		"logoFile": "",
+		"screenshots": [],
+		"dependencies": []
+	}
+]

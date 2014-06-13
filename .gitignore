@@ -1,0 +1,10 @@
+.externalToolBuilders
+.gradle
+.metadata
+.settings
+bin/
+tmp/
+
+*.launch
+*.tmp
+
