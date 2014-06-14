@@ -782,14 +782,20 @@ dt {
 
 section {
 	max-width: 650px;
-	padding: 30px 0px 50px 0px;
-	margin: 20px 0;
+	padding: 15px 0px;
+	margin: 0px;
+}
+section:first-child {
 	margin-top: 70px;
+	padding-top: 30px;
+}
+section:last-child {
+	padding-bottom: 50px;
 }
 section #title {
 	border: 0;
 	outline: none;
-	margin: 0 0 50px 0;
+	margin: 0 0 20px 0;
 	padding: 0 0 5px 0;
 }
 section #title h1 {
@@ -848,5 +854,26 @@ section #title .credits.right {
 	nav {
 		display: none;
 	}
+}
+
+ul#creatures-list li a.title
+{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+ul#creatures-list li div.status
+{
+	padding: 0px 10px;
+}
+
+ul#creatures-list li div.status span.status
+{
+	font-weight: bold;
+}
+
+ul#creatures-list li div.status.in-dev span.status
+{
+	color: #FCEB73;
 }
 
