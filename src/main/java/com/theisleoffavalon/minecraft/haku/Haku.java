@@ -2,6 +2,7 @@ package com.theisleoffavalon.minecraft.haku;
 
 import java.io.File;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 
 import org.apache.logging.log4j.LogManager;
@@ -22,8 +23,10 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = Haku.MODID, name = Haku.NAME)
 public class Haku
 {
-	public static final String MODID   = "theisleoffavalon_haku";
-	public static final String NAME    = "Haku";
+	public static final String MODID = "theisleoffavalon_haku";
+	public static final String NAME  = "Haku";
+	
+	public static final String TEXTURE_PATH_ENTITIES = "textures/entities";
 	
 	@Instance(Haku.MODID)
 	public static Haku instance;
@@ -41,7 +44,15 @@ public class Haku
 	 */
 	private File modDir;
 	
+	/**
+	 * Mod entity event handler
+	 */
 	private EventHandlerEntity entityEventHandler;
+	
+	/**
+	 * The creative mode inventory tab
+	 */
+	private CreativeTabs creativeTab;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -62,6 +73,8 @@ public class Haku
 				Config.save();
 		}
 		
+		this.creativeTab = new HakuCreativeTab();
+		
 		this.entityEventHandler = new EventHandlerEntity();
 		MinecraftForge.EVENT_BUS.register(this.entityEventHandler);
 		
@@ -74,6 +87,8 @@ public class Haku
 	public void init(FMLInitializationEvent event)
 	{
 		ConfigEntities.initialize();
+		
+		proxy.registerEntityRenderers();
 	}
 	
 	@EventHandler
@@ -90,5 +105,15 @@ public class Haku
 	public File getModDir()
 	{
 		return modDir;
+	}
+	
+	/**
+	 * Get the creative mode tab for Haku.
+	 * 
+	 * @return the creative mode tab
+	 */
+	public CreativeTabs getCreativeTab()
+	{
+		return creativeTab;
 	}
 }
