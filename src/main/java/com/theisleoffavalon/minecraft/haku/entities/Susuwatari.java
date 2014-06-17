@@ -15,7 +15,7 @@ import net.minecraft.world.World;
  */
 public class Susuwatari extends EntityCreature
 {
-	private static final double MAX_HEALTH          = 1.0D;
+	private static final double MAX_HEALTH          = 4.0D;
 	private static final double BASE_MOVEMENT_SPEED = 0.25D;
 	
 	public static String getName()
