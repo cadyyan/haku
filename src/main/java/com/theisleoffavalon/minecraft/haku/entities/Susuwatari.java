@@ -17,6 +17,11 @@ public class Susuwatari extends EntityCreature
 	private static final double MAX_HEALTH          = 1.0D;
 	private static final double BASE_MOVEMENT_SPEED = 0.25D;
 	
+	public static String getName()
+	{
+		return "Susuwatari";
+	}
+	
 	public Susuwatari(World world)
 	{
 		super(world);
@@ -42,7 +47,7 @@ public class Susuwatari extends EntityCreature
 	@Override
 	public void setAIMoveSpeed(float speed)
 	{
-		this.setAIMoveSpeed(speed);
+		super.setAIMoveSpeed(speed);
 	}
 	
 	@Override

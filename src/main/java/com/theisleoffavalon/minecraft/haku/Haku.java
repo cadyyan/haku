@@ -32,7 +32,7 @@ public class Haku
 	public static Haku instance;
 	
 	@SidedProxy(
-		clientSide = "com.theisleoffavalon.minecraft.haku.CommonProxy",
+		clientSide = "com.theisleoffavalon.minecraft.haku.ClientProxy",
 		serverSide = "com.theisleoffavalon.minecraft.haku.CommonProxy"
 	)
 	public static CommonProxy proxy;
@@ -88,6 +88,7 @@ public class Haku
 	{
 		ConfigEntities.initialize();
 		
+		proxy.registerEntities();
 		proxy.registerEntityRenderers();
 	}
 	

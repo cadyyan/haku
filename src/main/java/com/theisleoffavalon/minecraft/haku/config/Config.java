@@ -8,6 +8,8 @@ public class Config
 {
 	public static Configuration config;
 	
+	public static final String CATEGORY_ENTITIES = "Entities";
+	
 	/**
 	 * Initialize the configuration file if it doesn't exist and load data from the configuration
 	 * file.
