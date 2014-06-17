@@ -9,7 +9,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.theisleoffavalon.minecraft.haku.config.Config;
-import com.theisleoffavalon.minecraft.haku.config.ConfigEntities;
 import com.theisleoffavalon.minecraft.haku.events.EventHandlerEntity;
 
 import cpw.mods.fml.common.Mod;
@@ -86,8 +85,6 @@ public class Haku
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-		ConfigEntities.initialize();
-		
 		proxy.registerEntities();
 		proxy.registerEntityRenderers();
 	}
