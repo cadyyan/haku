@@ -12,7 +12,8 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderSusuwatari extends Render
 {
-	private static final ResourceLocation TEXTURE = new ResourceLocation("theisleoffavalon_haku", Haku.TEXTURE_PATH_ENTITIES + "/susuwatari.png");	
+	private static final ResourceLocation TEXTURE = new ResourceLocation("theisleoffavalon_haku", Haku.TEXTURE_PATH_ENTITIES + "/susuwatari.png");
+	private static final float RENDER_FACTOR = 1.0F / 16.0F;
 	
 	private ModelRenderer box;
 	
@@ -34,18 +35,14 @@ public class RenderSusuwatari extends Render
 	{
 		GL11.glPushMatrix();
 		GL11.glDisable(GL11.GL_LIGHTING);
-		GL11.glTranslated(x, y, z);
+		GL11.glTranslated(x, y + 4.0 * RENDER_FACTOR, z);
 		
 		renderManager.renderEngine.bindTexture(TEXTURE);
 		
-		float factor = 1.0F / 16.0F;
-		
-		box.render(factor);
+		box.render(RENDER_FACTOR);
 		
 		GL11.glEnable(GL11.GL_LIGHTING);
 		GL11.glPopMatrix();
-		
-		// TODO: handle susuwatari rendering
 	}
 
 	@Override
