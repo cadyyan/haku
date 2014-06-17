@@ -7,6 +7,7 @@ import net.minecraft.entity.ai.EntityAIPanic;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 
 /**
@@ -34,20 +35,6 @@ public class Susuwatari extends EntityCreature
 	public boolean isAIEnabled()
 	{
 		return true;
-	}
-	
-	@Override
-	public void onLivingUpdate()
-	{
-		super.onLivingUpdate();
-		
-		// TODO: onLivingUpdate
-	}
-	
-	@Override
-	public void setAIMoveSpeed(float speed)
-	{
-		super.setAIMoveSpeed(speed);
 	}
 	
 	@Override
