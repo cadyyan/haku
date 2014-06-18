@@ -28,8 +28,8 @@ public class Susuwatari extends EntityCreature
 		super(world);
 		
 		this.tasks.addTask(0, new EntityAISwimming(this));
-		this.tasks.addTask(1, new EntityAIWander(this, 1.0D));
-		this.tasks.addTask(2, new EntityAIPanic(this, 1.4D));
+		this.tasks.addTask(1, new EntityAIPanic(this, 1.4D));
+		this.tasks.addTask(2, new EntityAIWander(this, 1.0D));
 	}
 	
 	@Override
