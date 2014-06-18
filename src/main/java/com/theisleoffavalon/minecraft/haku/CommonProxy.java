@@ -31,7 +31,7 @@ public class CommonProxy
 			20,
 			true
 		);
-		registerEntityEgg(Susuwatari.class, 0x00FF00, 0x000000);
+		registerEntityEgg(Susuwatari.class, 0x323232, 0x282828);
 	}
 	
 	public void registerEntityRenderers()
